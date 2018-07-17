@@ -1,0 +1,42 @@
+group "org.kotlinacademy"
+version "1.1"
+
+apply plugin: 'org.jetbrains.kotlin.frontend'
+apply plugin: 'kotlin2js'
+
+kotlinFrontend {
+    downloadNodeJsVersion = '10.0.0'
+
+    npm {
+        dependency("webpack-cli", "v2.0.12")
+        dependency("firebase", "^4.6.2")
+        dependency("react", "15.6.1")
+        dependency("react-dom", "15.6.1")
+        dependency("react-router-dom", "4.2.2")
+        dependency("@material-ui/core", "1.1.0")
+    }
+
+    sourceMaps = true
+
+    webpackBundle {
+        bundleName = "main"
+        contentPath = file('src/main/web')
+        proxyUrl = "http://localhost:8080"
+    }
+}
+
+dependencies {
+    compile project(':common-js')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+    compile("org.jetbrains.kotlinx:kotlinx-html-js:0.6.11") { force = true }
+    compile "org.jetbrains:kotlin-react:16.4.1-pre.34-kotlin-1.2.50"
+    compile "org.jetbrains:kotlin-react-dom:16.4.1-pre.34-kotlin-1.2.50"
+}
+
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    kotlinOptions.outputFile = "$project.buildDir.path/js/${project.name}.js"
+    kotlinOptions.sourceMap = true
+    kotlinOptions.moduleKind = 'commonjs'
+    kotlinOptions.main = "call"
+}

@@ -1,0 +1,15 @@
+build
+.gradle
+.idea/*
+out
+*.iml
+.directory
+node_modules
+local.properties
+/backend/static/*
+keystore.jks
+android/mobile/release/*
+
+.DS_Store
+.externalNativeBuild
+.database

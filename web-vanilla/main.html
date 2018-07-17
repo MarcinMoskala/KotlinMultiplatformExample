@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quotations</title>
+</head>
+<body>
+<div id="text"></div>
+<div id="author"></div>
+<button onclick="presenter.onNext()">Next</button>
+</body>
+<script type="text/javascript" src="build/web/kotlin.js"></script>
+<script type="text/javascript" src="build/web/common-js.js"></script>
+<script>
+    var common = this['common-js'].org.kotlinacademy
+    var view = new function() {
+        this.showQuote_4z1tej$ = function(quote) {
+            document.getElementById("text").innerHTML = quote.text;
+            document.getElementById("author").innerHTML = quote.person;
+        }
+    };
+    var repo = new common.repository.QuotationRepositoryImpl()
+    var presenter = new common.presentation.QuotationPresenter(view,repo);
+    presenter.onStart()
+</script>
+</html>

@@ -1,0 +1,16 @@
+apply plugin: 'konan'
+
+konanArtifacts {
+    framework('QuotationsCommon', targets: ['iphone', 'iphone_sim']) {
+        extraOpts '-module_name', 'QC'
+
+        enableDebug true
+        enableMultiplatform true
+
+        srcDir 'src/main'
+    }
+}
+
+dependencies {
+    expectedBy project(':common')
+}
