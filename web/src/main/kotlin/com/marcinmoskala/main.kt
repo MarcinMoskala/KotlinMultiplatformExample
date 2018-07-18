@@ -1,6 +1,6 @@
-package org.kotlinacademy
+package com.marcinmoskala
 
-import org.kotlinacademy.components.QuotesComponent
+import com.marcinmoskala.components.QuotesComponent
 import react.dom.render
 import kotlin.browser.document
 import kotlin.browser.window

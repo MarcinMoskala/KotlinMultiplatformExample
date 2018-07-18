@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Quotations</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<div id="text"></div>
-<div id="author"></div>
-<button onclick="presenter.onNext()">Next</button>
+<div class="center">
+    <div class="quotation-container">
+        <div class="text" id="text"></div>
+        <div class="person" id="author"></div>
+        <button class="next" onclick="presenter.onNext()">Next</button>
+    </div>
+</div>
 </body>
 <script type="text/javascript" src="build/web/kotlin.js"></script>
-<script type="text/javascript" src="build/web/common-js.js"></script>
+<script type="text/javascript" src="build/web/web-vanilla.js"></script>
 <script>
-    var common = this['common-js'].org.kotlinacademy
+    var common = this['web-vanilla'].org.kotlinacademy
     var view = new function() {
-        this.showQuote = function(quote) {
+        this.showQuote_4z1tej$ = function(quote) {
             document.getElementById("text").innerHTML = quote.text;
             document.getElementById("author").innerHTML = quote.person;
         }
@@ -22,5 +27,6 @@
     var repo = new common.repository.QuotationRepositoryImpl()
     var presenter = new common.presentation.QuotationPresenter(view,repo);
     presenter.onStart()
+
 </script>
 </html>

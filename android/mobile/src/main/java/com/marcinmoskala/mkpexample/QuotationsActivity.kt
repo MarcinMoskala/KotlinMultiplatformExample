@@ -3,10 +3,10 @@ package com.marcinmoskala.mkpexample
 import android.app.Activity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_quotations.*
-import org.kotlinacademy.data.Quote
-import org.kotlinacademy.presentation.QuotationPresenter
-import org.kotlinacademy.repository.QuotationRepositoryImpl
-import org.kotlinacademy.view.QuotationView
+import com.marcinmoskala.data.Quote
+import com.marcinmoskala.presentation.QuotationPresenter
+import com.marcinmoskala.repository.QuotationRepositoryImpl
+import com.marcinmoskala.view.QuotationView
 
 class QuotationsActivity : Activity(), QuotationView {
 

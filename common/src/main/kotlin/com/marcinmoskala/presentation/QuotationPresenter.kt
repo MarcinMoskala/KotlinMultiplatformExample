@@ -1,8 +1,9 @@
-package org.kotlinacademy.presentation
+package com.marcinmoskala.presentation
 
-import org.kotlinacademy.repository.QuotationRepository
-import org.kotlinacademy.view.QuotationView
+import com.marcinmoskala.repository.QuotationRepository
+import com.marcinmoskala.view.QuotationView
 
+// common/src/main/kotlin/com/marcinmoskala/presentation/QuotationPresenter.kt
 class QuotationPresenter(
         private val view: QuotationView,
         private val repo: QuotationRepository

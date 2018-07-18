@@ -1,5 +1,9 @@
 apply plugin: 'konan'
 
+konan.targets = [
+        'ios_arm64', 'ios_x64'
+]
+
 konanArtifacts {
     framework('QuotationsCommon', targets: ['iphone', 'iphone_sim']) {
         extraOpts '-module_name', 'QC'

@@ -1,6 +1,6 @@
-package org.kotlinacademy.repository
+package com.marcinmoskala.repository
 
-import org.kotlinacademy.data.Quote
+import com.marcinmoskala.data.Quote
 
 class QuotationRepositoryImpl : QuotationRepository {
 

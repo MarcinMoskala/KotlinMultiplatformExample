@@ -1,7 +1,8 @@
-apply plugin: 'kotlin2js'
+apply plugin: 'kotlin-platform-js'
 
 dependencies {
-    compile project(':common-js')
+    expectedBy project(':common')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 }
 
 compileKotlin2Js {

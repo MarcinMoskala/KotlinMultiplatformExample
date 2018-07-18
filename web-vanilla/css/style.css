@@ -1,0 +1,20 @@
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.person {
+    text-align: right;
+}
+
+.quotation-container {
+    text-align: center;
+}
+
+.text {
+    font-weight: 600;
+    font-family: "Open Sans", open-sans, sans-serif;
+    font-size: 28px;
+}
