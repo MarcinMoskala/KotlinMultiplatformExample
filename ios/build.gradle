@@ -1,0 +1,13 @@
+// ios/build.gradle
+apply plugin: 'konan'
+
+konan.targets = [
+    'ios_arm64', 'ios_x64'
+]
+
+konanArtifacts {
+    program('ios') {
+        srcFiles fileTree('src/main/kotlin')
+        srcFiles fileTree('../common/src/main/kotlin')
+    }
+}

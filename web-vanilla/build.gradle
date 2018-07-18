@@ -6,10 +6,7 @@ dependencies {
 }
 
 compileKotlin2Js {
-    kotlinOptions.metaInfo = true
-    kotlinOptions.sourceMap = true
     kotlinOptions.moduleKind = 'plain'
-    kotlinOptions.sourceMapEmbedSources = "always"
 }
 
 task assembleWeb(type: Sync) {
