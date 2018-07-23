@@ -8,6 +8,9 @@ konan.targets = [
 konanArtifacts {
     program('ios') {
         srcFiles fileTree('src/main/kotlin')
-        srcFiles fileTree('../common/src/main/kotlin')
+        enableDebug true
+        libraries {
+            allLibrariesFrom project(':common-native')
+        }
     }
 }

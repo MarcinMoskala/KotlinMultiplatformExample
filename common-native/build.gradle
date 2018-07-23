@@ -5,12 +5,19 @@ konan.targets = [
 ]
 
 konanArtifacts {
+    // This is used by ios-classic where we need build generated framework which is later imported on XCode
     framework('QuotationsCommon', targets: ['iphone', 'iphone_sim']) {
         extraOpts '-module_name', 'QC'
 
         enableDebug true
         enableMultiplatform true
 
+        srcDir 'src/main'
+    }
+
+    // This is used by ios where we use library in Konan
+    library('QuotationsCommonKlib', targets: ['iphone', 'iphone_sim']) {
+        extraOpts '-module_name', 'QC'
         srcDir 'src/main'
     }
 }
