@@ -17,7 +17,6 @@ konanArtifacts {
 
     // This is used by ios where we use library in Konan
     library('QuotationsCommonKlib', targets: ['iphone', 'iphone_sim']) {
-        extraOpts '-module_name', 'QC'
         srcDir 'src/main'
     }
 }
