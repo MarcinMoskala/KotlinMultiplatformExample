@@ -28,6 +28,7 @@ allprojects {
 
     }
     repositories {
+        maven { url 'http://dl.bintray.com/kotlin/kotlin-eap-1.2' }
         maven { url "https://kotlin.bintray.com/kotlinx" }
         maven { url "http://dl.bintray.com/kotlin/kotlin-js-wrappers" }
         maven { url "http://dl.bintray.com/kotlin/kotlin-dev" }

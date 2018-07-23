@@ -3,12 +3,11 @@ package com.marcinmoskala.presentation
 import com.marcinmoskala.repository.QuotationRepository
 import com.marcinmoskala.view.QuotationView
 
-// common/src/main/kotlin/com/marcinmoskala/presentation/QuotationPresenter.kt
 class QuotationPresenter(
         private val view: QuotationView,
         private val repo: QuotationRepository
 ) {
-    private var nextQuoteId = 0
+    private var nextQuoteId = -1
 
     fun onStart() {
         onNext()
