@@ -9,10 +9,10 @@
 import kotlinx.cinterop.*
 import platform.Foundation.*
 import platform.UIKit.*
-import org.kotlinacademy.data.Quote
-import org.kotlinacademy.presentation.QuotationPresenter
-import org.kotlinacademy.repository.QuotationRepositoryImpl
-import org.kotlinacademy.view.QuotationView
+import com.marcinmoskala.data.Quote
+import com.marcinmoskala.presentation.QuotationPresenter
+import com.marcinmoskala.repository.QuotationRepositoryImpl
+import com.marcinmoskala.view.QuotationView
 
 @ExportObjCClass
 class ViewController : UIViewController {

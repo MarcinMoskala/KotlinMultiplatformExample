@@ -4,6 +4,7 @@ allprojects {
         ext.serialization_version = '0.5.1'
         ext.nodeVersion = '8.9.4'
         ext.kotlin_native_version = '0.7.1'
+        ext.mockk_version = '1.7.17'
 
         repositories {
             maven { url "https://kotlin.bintray.com/kotlinx" }

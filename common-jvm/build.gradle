@@ -5,5 +5,5 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
-    testCompile "io.mockk:mockk:1.7.17"
+    testCompile "io.mockk:mockk:$mockk_version"
 }
