@@ -9,17 +9,17 @@
 import UIKit
 import QuotationsCommon
 
-class ViewController: UIViewController, QCQuotationView {
+class ViewController: UIViewController, QuotationView {
 
     @IBOutlet weak var textView: UILabel!
     @IBOutlet weak var authorView: UILabel!
     
-    let repo = QCQuotationRepositoryImpl()
-    var presenter: QCQuotationPresenter!
+    let repo = QuotationRepositoryImpl()
+    var presenter: QuotationPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = QCQuotationPresenter(view: self, repo: repo)
+        presenter = QuotationPresenter(view: self, repo: repo)
         presenter.onStart()
     }
 
@@ -27,7 +27,7 @@ class ViewController: UIViewController, QCQuotationView {
         presenter.onNext()
     }
     
-    func showQuote(quote: QCQuote) {
+    func showQuote(quote: Quote) {
         textView.text = quote.text
         authorView.text = quote.person
     }

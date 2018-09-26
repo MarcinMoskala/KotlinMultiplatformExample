@@ -164,7 +164,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "case \"$PLATFORM_NAME\" in\niphoneos)\nNAME=ios_arm64\n;;\niphonesimulator)\nNAME=ios_x64\n;;\n*)\necho \"Unknown platform: $PLATFORN_NAME\"\nexit 1\n;;\nesac\n\n\"$SRCROOT/../gradlew\" -p \"$SRCROOT/../common-native\" \"build\"\nrm -rf \"$SRCROOT/build/\"\nmkdir \"$SRCROOT/build/\"\ncp -a \"$SRCROOT/../common-native/build/konan/bin/$NAME/\" \"$SRCROOT/build/\"";
+			shellScript = "case \"$PLATFORM_NAME\" in\niphoneos)\nNAME=ios_arm64\n;;\niphonesimulator)\nNAME=ios_x64\n;;\n*)\necho \"Unknown platform: $PLATFORN_NAME\"\nexit 1\n;;\nesac\n\n\"$SRCROOT/../gradlew\" -p \"$SRCROOT/../common-native\" \"build\"\nrm -rf \"$SRCROOT/build/\"\nmkdir \"$SRCROOT/build/\"\ncp -a \"$SRCROOT/../common-native/build/lib/main/debug/$NAME/\" \"$SRCROOT/build/\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
